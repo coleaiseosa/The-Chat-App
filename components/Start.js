@@ -1,5 +1,13 @@
 import React from 'react';
-import { View, Text, Button, TextInput, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
+import { 
+    View, 
+    Text, 
+    Button, 
+    TextInput, 
+    StyleSheet, 
+    ImageBackground, 
+    TouchableOpacity 
+} from 'react-native';
 
 const backgroundColors = {
     black: { backgroundColor: '#000000'},
@@ -19,11 +27,11 @@ export default class Start extends React.Component {
         return (
             <View style={styles.container}>
                 <ImageBackground
-                  source={require('../assets/Background-Image.png')}
+                  source={require('../assets/background-img.jpg')}
                   style={[styles.container, styles.image]}
                 >
                     
-                  <Text style={styles.title} >App Title</Text>
+                  <Text style={styles.title} >Chat App</Text>
 
                   <View style={styles.inputBox} >
                      <TextInput
@@ -36,25 +44,49 @@ export default class Start extends React.Component {
                       <View>
                         <Text style={styles.colorSelector} >Choose your Background:</Text>
                         <View style={styles.colorWrapper}>
-                            <TouchableOpacity style={[styles.color, black]}
+                            <TouchableOpacity 
+                              style={[styles.color, 
+                              black,
+                              this.state.color === black.backgroundColor
+                              ? styles.colorSelected
+                              : {}
+                            ]}
                               onPress={() =>
                               this.setState({ color: black.backgroundColor })
                               }
                             />
 
-                            <TouchableOpacity style={[styles.color, grey]}
+                            <TouchableOpacity style={[
+                                styles.color, 
+                                grey,
+                                this.state.color === grey.backgroundColor
+                                ? styles.colorSelected
+                                : {}
+                            ]}
                               onPress={() =>
                               this.setState({ color: grey.backgroundColor })
                               }
                             />
 
-                            <TouchableOpacity style={[styles.color, purple]}
+                            <TouchableOpacity style={[
+                                styles.color, 
+                                purple,
+                                this.state.color === purple.backgroundColor
+                                ? styles.colorSelected
+                                : {}
+                            ]}
                               onPress={() =>
                               this.setState({ color: purple.backgroundColor })
                               }
                             />
 
-                            <TouchableOpacity style={[styles.color, orange]}
+                            <TouchableOpacity style={[
+                                styles.color,
+                                orange,
+                                this.state.color === orange.backgroundColor
+                                ? styles.colorSelected
+                                : {}
+                            ]}
                               onPress={() =>
                               this.setState({ color: orange.backgroundColor })
                               }
@@ -151,5 +183,11 @@ const styles = StyleSheet.create({
     chatBoxText: {
         color: '#fff',
         fontWeight: '300'
-    }
+    },
+
+    colorSelected: {
+        borderStyle: "solid",
+        borderWidth: 2,
+        borderColor: "#5f5f5f",
+      },
 })
