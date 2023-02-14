@@ -13,7 +13,7 @@ const backgroundColors = {
     black: { backgroundColor: '#000000'},
     grey: { backgroundColor: '#8a95a5'},
     purple: { backgroundColor: '#474056'},
-    orange: { backgroundColor: '#ffa500'}
+    green: { backgroundColor: '#94ae89'}
 }
 
 export default class Start extends React.Component {
@@ -23,7 +23,7 @@ export default class Start extends React.Component {
         this.state = { name: '', color: ''};
     }
     render () {
-        const { black, grey, purple, orange} = backgroundColors;
+        const { black, grey, purple, green} = backgroundColors;
         return (
             <View style={styles.container}>
                 <ImageBackground
@@ -82,13 +82,13 @@ export default class Start extends React.Component {
 
                             <TouchableOpacity style={[
                                 styles.color,
-                                orange,
-                                this.state.color === orange.backgroundColor
+                                green,
+                                this.state.color === green.backgroundColor
                                 ? styles.colorSelected
                                 : {}
                             ]}
                               onPress={() =>
-                              this.setState({ color: orange.backgroundColor })
+                              this.setState({ color: green.backgroundColor })
                               }
                             />
                         </View>
