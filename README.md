@@ -33,3 +33,27 @@ before joining the chat.
 - The chat must provide users with two additional communication features: sending images
   and location data.
 - Data gets stored online and offline.
+
+### Dependencies
+
+    "@react-native-async-storage/async-storage": "~1.17.3",
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-community/netinfo": "9.3.5",
+    "@react-navigation/bottom-tabs": "^6.5.4",
+    "@react-navigation/native": "^6.1.3",
+    "@react-navigation/stack": "^6.3.12",
+    "expo": "~47.0.12",
+    "expo-image-picker": "~14.0.2",
+    "expo-location": "~15.0.1",
+    "expo-permissions": "~14.0.0",
+    "expo-status-bar": "~1.4.2",
+    "firebase": "8.10.1",
+    "react": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-gesture-handler": "~2.8.0",
+    "react-native-gifted-chat": "^1.1.1",
+    "react-native-maps": "1.3.2",
+    "react-native-reanimated": "~2.12.0",
+    "react-native-safe-area-context": "4.4.1",
+    "react-native-screens": "~3.18.0",
+    "react-navigation": "^4.4.4"
