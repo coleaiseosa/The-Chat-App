@@ -62,9 +62,6 @@ export default class CustomActions extends React.Component {
                 const result = await Location.getCurrentPositionAsync({})
                 .catch((error) => console.log(error));
 
-                const longitude = JSON.stringify(result.coords.longitude);
-                const altitude = JSON.stringify(result.coords.latitude);
-
                 if (result) {
                     this.props.onSend({
                         location: {
@@ -94,17 +91,19 @@ export default class CustomActions extends React.Component {
             xhr.open("GET", uri, true);
             xhr.send(null);
 
-            const imageNameBefore = uri.split("/");
+            
+        })
+
+        const imageNameBefore = uri.split("/");
             const imageName = imageNameBefore[imageNameBefore.length - 1];
 
-            const ref = firebase.storage().ref().child(`ìmages/${imageName}`);
+            const ref = firebase.storage().ref().child(`images/${imageName}`);
 
             const snapshot = await ref.put(blob);
 
             blob.close();
 
             return await snapshot.ref.getDownloadURL();
-        })
     }
 
 
