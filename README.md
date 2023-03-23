@@ -57,3 +57,11 @@ before joining the chat.
     "react-native-safe-area-context": "4.4.1",
     "react-native-screens": "~3.18.0",
     "react-navigation": "^4.4.4"
+
+### Main view
+
+![Main View](assets/chatmain.png)
+
+### Chat page
+
+![Chat page](assets/chat3.png)
