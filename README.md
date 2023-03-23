@@ -65,5 +65,3 @@ before joining the chat.
 ### Chat page
 
 ![Chat page](assets/chat3.png)
-
-<img src="assets/chat3.png" alt="chat page">
