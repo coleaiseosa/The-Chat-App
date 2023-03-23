@@ -60,8 +60,10 @@ before joining the chat.
 
 ### Main view
 
-![Main View](assets/chatmain.png)
+![Main View](assets/chatapp.jpg)
 
 ### Chat page
 
 ![Chat page](assets/chat3.png)
+
+<img src="assets/chat3.png" alt="chat page">
